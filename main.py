@@ -48,6 +48,10 @@ def main():
             if asteroid.collisions(player):
                 print("Game Over!")
                 sys.exit()
+            for bullet in shots:
+                if(asteroid.collisions(bullet)):
+                    asteroid.split()
+                    bullet.kill()
 
 
 
